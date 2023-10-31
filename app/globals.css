@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,7 +6,8 @@
 :root {
   --font-base: "Questrial", serif;
 
-  --primary-color: #e09132;
+  --primary-color: #00AEEF;
+  --secondary-color: #EB1820;
   --secondary-color: #313bac;
   --red-color: #a83e4e;
   --success-color: #4bb543;
@@ -15,7 +17,7 @@
   --gray-color: #cdcec9;
   --brown-color: #46364a;
   --white-color: #ffffff;
-  --zilla-font: "Zilla Slab", serif;
+  --font-base: 'Roboto', sans-serif;
 }
 
 /* @media (prefers-color-scheme: dark) {

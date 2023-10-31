@@ -10,7 +10,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        blue: '#00AEEF'
+        blue: '#00AEEF',
+        red: '#EB1820'
       },
       listStyleType: {
         roman: 'upper-roman',

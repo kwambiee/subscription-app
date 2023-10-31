@@ -8,8 +8,19 @@
     font-size: medium !important;
   }
 
+  .cardi {
+    box-shadow: 0px -2px 9px -1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px -2px 9px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px -2px 9px -1px rgba(0, 0, 0, 0.75);
+  }
+
   span {
     width: 100% !important;
-    flex: justify-between !important;
+    justify-content: space-between !important;
+  }
+  .shadow-md {
+    div {
+      justify-content: space-between !important;
+    }
   }
 }

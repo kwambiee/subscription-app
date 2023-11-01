@@ -76,8 +76,8 @@ export const PaymentRight = ({
         </select>
       </div>
       <div>
-        <p className="font-semibold my-5">Payment method</p>
-        <div className="flex gap-x-4">
+        {/* <p className="font-semibold my-5">Payment method</p> */}
+        {/* <div className="flex gap-x-4">
           <div
             className="p-5 rounded border border-black w-1/3 cursor-pointer hover:bg-gray-100 transition-all"
             onClick={() => setPaymentMethod("card")}
@@ -100,20 +100,20 @@ export const PaymentRight = ({
               type="number"
               className="w-full p-2 border-gray-300 rounded-t border placeholder:text-sm"
               placeholder="1234 1234 1234 1234"
-              required
+              // required
             />
             <div className="flex">
               <input
                 type="text"
                 className="border-gray-300 border-b border-l p-2 w-1/2 rounded-bl placeholder:text-sm"
                 placeholder="MM / YY"
-                required
+                // required
               />
               <input
                 type="number"
                 className="border-gray-300 border-b border-l border-r p-2 w-1/2 rounded-br placeholder:text-sm"
                 placeholder="CVC"
-                required
+                // required
               />
             </div>
           </div>
@@ -126,14 +126,14 @@ export const PaymentRight = ({
               type="number"
               className="w-full p-2 border-gray-300 rounded-t border placeholder:text-sm"
               placeholder="254719428019"
-              required
+              // required
             />
           </div>
         )}
         <div className="flex gap-x-2 items-center mt-5">
           <input type="checkbox" defaultChecked className="h-5 w-5" />
           <p className="text-sm">You agree to the terms of service</p>
-        </div>
+        </div> */}
         <button
           type="submit"
           className="mt-5 text-center text-white bg-blue-500 text-sm w-full rounded py-3 hover:bg-opacity-70 transition-all"

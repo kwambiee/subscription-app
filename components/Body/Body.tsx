@@ -16,25 +16,19 @@ const features = {
     "System curve analysis",
     "Wiring diagrams Included",
   ],
-  custom: [
-    "Access to sizing solutions",
-    "Custom Logo Option",
-    "Live chart support",
-    "Personalized Selection",
-    "Discounted pricing option",
-  ],
+  custom: ["Solar Calc Premium", "Pump Calc Premium"],
 };
 
-const Body = () => {
+const Body = ({ source }: { source: string }) => {
   return (
     <div className="">
       <h2 className="text-[3rem] font-semibold text-center mt-10">
         Discover a plan tailored to your specific requirements
       </h2>
       <div className="flex gap-4 justify-center w-full mt-14">
-        <div className="hover:shadow-sm cursor-pointer ease-in-out duration-300 rounded-md border-2 border-gray-300 shadow w-1/3 p-[5%]">
+        <div className="hover:shadow-sm cursor-pointer ease-in-out duration-300 rounded-md border-2 capitalize border-gray-300 shadow w-1/3 p-[5%]">
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Basic
+            {source.replace("-", " ")} Basic
           </h5>
           <p className="text-3xl font-extrabold my-2">$0</p>
           <p className="text-md font-medium">Your current plan</p>
@@ -57,8 +51,8 @@ const Body = () => {
           <div className="rounded-full w-1/2 bg-black text-white font-bold absolute top-0 -translate-y-1/2 py-3 left-1/2 text-center -translate-x-1/2">
             Most Popular
           </div>
-          <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Premium
+          <h5 className="text-2xl capitalize font-bold tracking-tight text-gray-900 dark:text-white">
+            {source.replace("-", " ")} Premium
           </h5>
           <p className="text-3xl font-extrabold my-2">
             $ 10
@@ -88,7 +82,9 @@ const Body = () => {
             $ ??
             <span className="text-sm font-light"> per user / per month</span>
           </p>
-          <p className="text-md font-medium">tailored subscription</p>
+          <p className="text-md font-medium">
+            Need more than {source.replace("-", " ")}?
+          </p>
           <ul className="list-none flex flex-col gap-2 mt-10">
             {features.custom.map((item, index) => (
               <li key={index} className="flex place-items-center gap-3">

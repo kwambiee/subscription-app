@@ -1,1 +1,33 @@
-node_modules
+# Node.js files
+node_modules/
+
+# Build files
+.next/
+out/
+dist/
+coverage/
+
+# Environment variables
+.env.local
+.env.development
+.env.test
+.env.production
+.env.local.js
+
+# Visual Studio Code files
+.vscode/
+
+# Mac files
+.DS_Store
+
+# Next.js development server logs
+*.log
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Ignore Next.js telemetry
+.next/telemetry
+
+# Custom Webpack build output directory
+build/

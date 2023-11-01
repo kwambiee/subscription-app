@@ -19,12 +19,11 @@ const customStyles = {
 };
 
 function PaymentModal({ isOpen, onRequestClose }) {
-  const [paymentMethod, setPaymentMethod] = useState("creditCard");
-  const [creditCardNumber, setCreditCardNumber] = useState("");
   const [mpesaPhoneNumber, setMpesaPhoneNumber] = useState("");
 
-  const handlePaymentMethodChange = (e) => {
-    setPaymentMethod(e.target.value);
+  const handlePaymentSubmit = (e) => {
+    e.preventDefault();
+    alert("Payment is being made");
   };
 
   return (
@@ -38,68 +37,27 @@ function PaymentModal({ isOpen, onRequestClose }) {
         Payment Information
       </h2>
 
-      <form>
+      <form onSubmit={handlePaymentSubmit}>
         <div className="mb-4">
           <label
-            htmlFor="paymentMethod"
+            htmlFor="PhoneNumber"
             className="block text-sm font-medium mb-2"
           >
-            Payment Method
+            Enter your phone number
           </label>
-          <select
-            id="paymentMethod"
-            value={paymentMethod}
-            onChange={handlePaymentMethodChange}
-            className="p-2 w-full border rounded-md"
-          >
-            <option value="creditCard">Credit Card</option>
-            <option value="mpesa">Mpesa</option>
-          </select>
+          <input
+            value={mpesaPhoneNumber}
+            onChange={(e) => setMpesaPhoneNumber(e.target.value)}
+            placeholder="2547xxxxxxxx"
+            className="border border-gray-400 rounded-md px-4 py-2 w-full"
+          />
         </div>
-
-        {paymentMethod === "creditCard" && (
-          <div className="mb-4">
-            <label
-              htmlFor="creditCardNumber"
-              className="block text-sm font-medium mb-2"
-            >
-              Credit Card Number
-            </label>
-            <input
-              type="text"
-              value={creditCardNumber}
-              onChange={(e) => setCreditCardNumber(e.target.value)}
-              placeholder="Credit Card Number"
-              id="creditCardNumber"
-              className="p-2 w-full border rounded-md"
-            />
-          </div>
-        )}
-
-        {paymentMethod === "mpesa" && (
-          <div className="mb-4">
-            <label
-              htmlFor="mpesaPhoneNumber"
-              className="block text-sm font-medium mb-2"
-            >
-              Mpesa Phone Number
-            </label>
-            <input
-              type="text"
-              value={mpesaPhoneNumber}
-              onChange={(e) => setMpesaPhoneNumber(e.target.value)}
-              placeholder="Mpesa Phone Number"
-              id="mpesaPhoneNumber"
-              className="p-2 w-full border rounded-md"
-            />
-          </div>
-        )}
 
         <button
           type="submit"
           className="bg-blue-500 hover:bg-blue-600 text-white rounded-md px-4 py-2"
         >
-          Submit Payment
+          Pay Now
         </button>
       </form>
     </Modal>

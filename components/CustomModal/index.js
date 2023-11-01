@@ -22,7 +22,7 @@ const customStyles = {
   },
 };
 
-function ModalComponent({ isOpen, closeModal, title }) {
+function CustomModal({ isOpen, closeModal, title }) {
   const [options, setOptions] = useState([]);
   const [selectedModules, setSelectedModules] = useState([
     "SolarCalc",
@@ -31,7 +31,6 @@ function ModalComponent({ isOpen, closeModal, title }) {
     "Training",
     "HeatCalc",
   ]);
-  const [isDisabled, setIsDisabled] = useState(false);
   const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
 
   const handleClick = (e) => {
@@ -51,7 +50,6 @@ function ModalComponent({ isOpen, closeModal, title }) {
 
   return (
     <>
-      {/* {isDisabled ? alert("You have selected your plans") : ""} */}
       <Modal
         isOpen={isOpen}
         s
@@ -79,12 +77,10 @@ function ModalComponent({ isOpen, closeModal, title }) {
                   <div className="flex flex-col space-y-2">
                     {selectedModules.map((module) => (
                       <button
-                        className={`bg-white border shadow px-12 py-1 rounded mb-2 hover:scale-90 hover:shadow-lg cursor-pointer transition-transform duration-300${
-                          isDisabled ? "bg-gray-100 cursor-not-allowed" : ""
-                        }`}
+                        className="bg-white border shadow px-12 py-1 rounded mb-2 hover:scale-90 hover:shadow-lg cursor-pointer transition-transform duration-300${
+                          "
                         value={module}
                         onClick={handleClick}
-                        disabled={isDisabled}
                       >
                         {module}
                       </button>
@@ -139,4 +135,4 @@ function ModalComponent({ isOpen, closeModal, title }) {
   );
 }
 
-export default ModalComponent;
+export default CustomModal;

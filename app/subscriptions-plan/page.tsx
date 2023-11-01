@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import ModalComponent from "@/components/modals";
+import CustomModal from "@/components/CustomModal";
 
-export default function Home() {
+export default function Subscription() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [title, setTitle] = useState(" Plan");
 
@@ -25,11 +25,7 @@ export default function Home() {
       >
         Get Started
       </button>
-      <ModalComponent
-        isOpen={isModalOpen}
-        closeModal={closeModal}
-        title={title}
-      />
+      <CustomModal isOpen={isModalOpen} closeModal={closeModal} title={title} />
     </div>
   );
 }

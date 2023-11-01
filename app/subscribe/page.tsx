@@ -13,8 +13,6 @@ const Page = ({
   searchParams: { [key: string]: "basic" | "premium" | "custom" };
 }) => {
   const plan = searchParams.plan;
-
-  console.log(plan);
   return (
     <main
       className={`${poppins.className} flex px-[5%] flex-col md:flex-row md:h-screen`}

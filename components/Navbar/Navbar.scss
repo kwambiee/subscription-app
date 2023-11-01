@@ -1,0 +1,26 @@
+@tailwind components;
+
+.translate-up {
+  transform: translateY(-150%);
+  transition: transform 0.5s ease-out;
+}
+
+.translate-down {
+  transform: translateY(14%);
+  transition: transform 0.5s ease-out;
+}
+
+.blue_line {
+  background-color: var(--dark-purple-color);
+  height: .4rem;
+  border-radius: 8px;
+
+}
+
+.translate-right {
+  transform: translateX(100%);
+}
+
+.move-left {
+  transform: translateX(-10%);
+}

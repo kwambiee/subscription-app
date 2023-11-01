@@ -10,7 +10,7 @@ const Page = ({
   searchParams,
 }: {
   params: { slug: string };
-  searchParams: { plan: "basic" | "premium" | "custom" };
+  searchParams: { plan: "basic" | "premium" | "custom", source: string };
 }) => {
   const plan = searchParams.plan;
 
@@ -18,7 +18,7 @@ const Page = ({
     <main
       className={`${poppins.className} flex px-[5%] flex-col md:flex-row md:h-screen`}
     >
-      <PaymentLeft plan={plan} />
+      <PaymentLeft plan={plan} source={searchParams.source}/>
       <PaymentRight plan={plan} />
     </main>
   );

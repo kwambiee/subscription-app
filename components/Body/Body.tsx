@@ -31,7 +31,7 @@ const Body = () => {
       <h2 className="text-[3rem] font-semibold text-center mt-10">
         Discover a plan tailored to your specific requirements
       </h2>
-      <div className="flex gap-4 justify-center w-full mt-20">
+      <div className="flex gap-4 justify-center w-full mt-14">
         <div className="hover:shadow-sm cursor-pointer ease-in-out duration-300 rounded-md border-2 border-gray-300 shadow w-1/3 p-[5%]">
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             Basic
@@ -105,7 +105,7 @@ const Body = () => {
           </Link>
         </div>
       </div>
-      <p className="text-gray-500 mt-10 hidden md:block">
+      <p className="text-gray-500 mt-12 hidden md:block">
         Powered by <span className="font-semibold">D&S payments</span> | Terms
         Privacy
       </p>

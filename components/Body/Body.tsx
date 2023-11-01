@@ -46,7 +46,7 @@ const Body = () => {
             ))}
           </ul>
           <a
-            className="mt-5 text-white font-extrabold bg-blue flex rounded py-3 px-4 justify-between hover:bg-opacity-70 transition-all text-sm duration-300 items-center"
+            className="mt-5 text-white font-extrabold bg-blueCustom flex rounded py-3 px-4 justify-between hover:bg-opacity-70 transition-all text-sm duration-300 items-center"
             href={"https://back.com"}
           >
             <p>Get Started</p>
@@ -73,7 +73,7 @@ const Body = () => {
             ))}
           </ul>
           <Link
-            className="mt-5 text-white font-extrabold bg-blue flex rounded py-3 px-4 justify-between hover:bg-opacity-70 transition-all text-sm duration-300 items-center"
+            className="mt-5 text-white font-extrabold bg-blueCustom flex rounded py-3 px-4 justify-between hover:bg-opacity-70 transition-all text-sm duration-300 items-center"
             href={"/subscribe?plan=premium"}
           >
             <p>Get Started</p>
@@ -97,7 +97,7 @@ const Body = () => {
             ))}
           </ul>
           <Link
-            className="mt-5 text-white font-extrabold bg-blue flex rounded py-3 px-4 justify-between hover:bg-opacity-70 transition-all text-sm duration-300 items-center"
+            className="mt-5 text-white font-extrabold bg-blueCustom flex rounded py-3 px-4 justify-between hover:bg-opacity-70 transition-all text-sm duration-300 items-center"
             href={"/subscribe?plan=custom"}
           >
             <p>Get Started</p>

@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import mpesa from "../public/mpesa.png";
+import { useFlutterwave, closePaymentModal } from "flutterwave-react-v3";
 
 export const PaymentRight = ({
   plan,
@@ -15,6 +16,28 @@ export const PaymentRight = ({
 }) => {
   const [countries, setCountries] = useState<Country[] | null>(null);
   const [paymentMethod, setPaymentMethod] = useState<"card" | "mpesa">("card");
+
+  const config = {
+    public_key: process.env.NEXT_PUBLIC_FLW_PUBLIC_KEY!,
+    tx_ref: Date.now().toString(),
+    amount: 100,
+    currency: "NGN",
+    payment_options: "card",
+    payment_plan: "3341",
+    customer: {
+      email: "user@gmail.com",
+      phone_number: "070********",
+      name: "john doe",
+    },
+    meta: { consumer_id: "7898", consumer_mac: "kjs9s8ss7dd" },
+    customizations: {
+      title: "my Payment Title",
+      description: "Payment for items in cart",
+      logo: "https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg",
+    },
+  };
+
+  const handleFlutterPayment = useFlutterwave(config);
 
   useEffect(() => {
     fetchCountries()
@@ -27,7 +50,13 @@ export const PaymentRight = ({
       className="py-[5%] px-[5%] md:w-1/2 shadow"
       onSubmit={(e) => {
         e.preventDefault();
-        //call backend
+        // handleFlutterPayment({
+        //   callback: (response) => {
+        //     console.log(response);
+        //     closePaymentModal(); // this will close the modal programmatically
+        //   },
+        //   onClose: () => {},
+        // });
       }}
     >
       <p className="font-semibold">Please input your information</p>
@@ -107,12 +136,11 @@ export const PaymentRight = ({
         </div>
         <button
           type="submit"
-          className="mt-5 text-center text-white bg-blue-400 text-sm w-full rounded py-3 hover:bg-opacity-70 transition-all"
+          className="mt-5 text-center text-white bg-blue-500 text-sm w-full rounded py-3 hover:bg-opacity-70 transition-all"
         >
           Subscribe
         </button>
       </div>
-
       <p className="text-gray-500 mt-10 md:hidden">
         Powered by <span className="font-semibold">D&S payments</span> | Terms
         Privacy

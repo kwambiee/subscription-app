@@ -5,7 +5,7 @@ import "./Navbar.scss";
 import Logo from "../../public/Davis.png";
 import Link from "next/link";
 
-const Navbar = () => {
+const Navbar = ({ userId }: { userId: string }) => {
   const [hubsToggle, setHubsToggle] = useState(false);
   const [menuToggle, setMenuToggle] = useState(false);
 
@@ -40,7 +40,7 @@ const Navbar = () => {
       </Link>
       <div className="flex">
         <h2 className="text-lg">
-          Hello, <span className="text-blue text-bold">Iain Mosima</span>
+          Hello, <span className="text-blue text-bold">User {userId}</span>
         </h2>
       </div>
     </nav>

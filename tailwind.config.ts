@@ -1,24 +1,23 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-    './node_modules/flowbite-react/**/*.js'
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/flowbite-react/**/*.js",
   ],
   theme: {
     extend: {
       colors: {
-        blue: '#00AEEF',
-        red: '#EB1820'
+        blueCustom: "#00AEEF",
+        redCustom: "#EB1820",
       },
       listStyleType: {
-        roman: 'upper-roman',
-      }
+        roman: "upper-roman",
+      },
     },
-
   },
-  plugins: [require('flowbite/plugin')],
-}
-export default config
+  plugins: [require("flowbite/plugin")],
+};
+export default config;
